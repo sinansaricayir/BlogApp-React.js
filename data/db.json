@@ -1,0 +1,28 @@
+{
+    "yazilar":
+    [
+        {
+            "ad":"Yeni başlayanlar için c#",
+            "aciklama":"lorem ipsum",
+            "yazar":"luffy",
+            "id":1
+          },
+          {
+            "ad":"Projeler İle Javascript",
+            "aciklama":"lorem ipsum hello world",
+            "yazar":"Anıl Akar",
+            "id":2
+          },
+          {
+            "ad":"React Öğreniyorum",
+            "aciklama":"lorem ipsum sit amet",
+            "yazar":"Ssa",
+            "id":3
+          },{
+            "ad":"Java Dünyası",
+            "aciklama":"lorem ipsum doalr ",
+            "yazar":"Ssa",
+            "id":4
+          }
+    ]
+}
