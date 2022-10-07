@@ -9,17 +9,12 @@ function Home() {
 
 
 
-  const remove = (id) =>{
-    const newBlogs=data.filter(blog=>blog.id !== id)
-    setData(newBlogs)
-  }
-
   
   return (
     <div className='home'>
       {loading && <h1 className='loading'>Yükleniyor....</h1>}
       {error && <h3 className='error'>{error}</h3>}
-      {data && <BlogList bloglar={data} baslik={'Bütün Yazılar'} remove={remove} />}
+      {data && <BlogList bloglar={data} baslik={'Bütün Yazılar'} />}
     </div>
   )
 }

@@ -1,17 +1,38 @@
 import React from 'react';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 function Create() {
 
-  const [baslik,setBaslik] = useState("");
+  const [ad,setAd] = useState("");
   const [aciklama,setAciklama] = useState("");
   const [yazar,setYazar] = useState("--Seçiniz--");
 
+  const[loading,setLoading] = useState(false);
+
+  const history = useHistory();
+
   const handleSubmit = (e) =>{
     e.preventDefault();
-    const yazi = {baslik,aciklama,yazar};
-    console.log(yazi);
+
+    const yazi = {ad,aciklama,yazar};
+    setLoading(true);
+
+    fetch("http://localhost:8000/yazilar",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify(yazi)
+
+    }).then(()=>{
+      console.log("yazı eklendi");
+      setLoading(false);
+      // history.go(-1);
+      history.push("/");
+    });
+    
   }
+
+
 
   return (
     <div className='create'>
@@ -19,7 +40,7 @@ function Create() {
       <form onSubmit={handleSubmit} >
 
         <label>Yazı Başlık:</label>
-        <input type="text" value={baslik} required onChange={(e)=>setBaslik(e.target.value)}/>
+        <input type="text" value={ad} required onChange={(e)=>setAd(e.target.value)}/>
 
         <label>Yazı Açıklama:</label>
         <textarea required value={aciklama} onChange={(e)=>setAciklama(e.target.value)}>
@@ -32,8 +53,11 @@ function Create() {
             <option value="Sinan Sarıçayır">Sinan Sarıçayır</option>
             <option value="Veysel Şimşir">Veysel Şimşir</option>
             <option value="Anıl akar">Anıl akar</option>
+            <option value="Derya Yılmaz">Derya Yılmaz</option>
+
         </select>
-        <button>Ekle</button>
+        {!loading && <button>Ekle</button>}
+        {loading && <button>Yükleniyor ... </button>}
       </form>
     </div>
   )

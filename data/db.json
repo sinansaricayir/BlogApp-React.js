@@ -1,30 +1,40 @@
-
-
 {
-    "yazilar":
-    [
-        {
-            "ad":"Yeni başlayanlar için c#",
-            "aciklama":"lorem ipsum",
-            "yazar":"luffy",
-            "id":1
-          },
-          {
-            "ad":"Projeler İle Javascript",
-            "aciklama":"lorem ipsum hello world",
-            "yazar":"Anıl Akar",
-            "id":2
-          },
-          {
-            "ad":"React Öğreniyorum",
-            "aciklama":"lorem ipsum sit amet",
-            "yazar":"Ssa",
-            "id":3
-          },{
-            "ad":"Java Dünyası",
-            "aciklama":"lorem ipsum doalr ",
-            "yazar":"Ssa",
-            "id":4
-          }
-    ]
+  "yazilar": [
+    {
+      "ad": "React Öğreniyorum",
+      "aciklama": "lorem ipsum sit amet",
+      "yazar": "Ssa",
+      "id": 3
+    },
+    {
+      "ad": "Java Dünyası",
+      "aciklama": "lorem ipsum doalr ",
+      "yazar": "Ssa",
+      "id": 4
+    },
+    {
+      "ad": ".NET 6",
+      "aciklama": "Yeni Nesil Web Api",
+      "yazar": "Veysel Şimşir",
+      "id": 5
+    },
+    {
+      "ad": "Python",
+      "aciklama": "Django Back End Framework",
+      "yazar": "Sinan Sarıçayır",
+      "id": 6
+    },
+    {
+      "ad": "Baş Belası",
+      "aciklama": "Tatlı Bela",
+      "yazar": "Derya Yılmaz",
+      "id": 7
+    },
+    {
+      "ad": "asd",
+      "aciklama": "asd",
+      "yazar": "Veysel Şimşir",
+      "id": 8
+    }
+  ]
 }
